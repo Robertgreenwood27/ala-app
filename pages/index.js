@@ -20,13 +20,6 @@ const Home = () => {
         With years of experience and a proven track record, we are committed to helping individuals and businesses
         organize their financial records, streamline processes, and unlock new opportunities for growth.
       </p>
-      {/* Call to Action */}
-      <a
-        href="/about"
-        className="text-blue-500 hover:text-blue-600 text-lg font-semibold transition duration-300"
-      >
-        Learn More &rarr;
-      </a>
     </div>
   );
 };
