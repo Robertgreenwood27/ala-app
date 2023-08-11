@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+/* styles.css */
 body {
-  background-color: rgb(230, 216, 196);
+  background-color: #F0F8FF;
+  margin: 0;
+  padding: 20px; /* Global padding for the entire body */
+  font-family: Arial, sans-serif;
 }
+
+
+
+
