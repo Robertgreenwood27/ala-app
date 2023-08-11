@@ -12,7 +12,7 @@ const Home = () => {
         Trusted Accounting Professional Bringing Order to Financial Chaos
       </h1>
       <p className="text-lg text-center mb-8">
-        Welcome to "Your Financial Cleanup," your trusted partner in achieving financial clarity and stability.
+        Welcome to Your Financial Cleanup, your trusted partner in achieving financial clarity and stability.
         Our dedicated team of skilled professionals specializes in providing top-notch cleanup services that
         bring clear and tangible financial benefits to our valued clients.
       </p>
