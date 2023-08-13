@@ -1,25 +1,51 @@
-import React from 'react';
-import Image from 'next/image'; // Import the Image component
+import React, { useEffect } from 'react';
+import dynamic from 'next/dynamic';
+import IntroductionComponent from '../components/IntroductionComponent';
+import ServicesComponent from '../components/ServicesComponent';
+import AboutComponent from '../components/AboutComponent';
+import BlogComponent from '../components/BlogComponent';
+import ContactComponent from '../components/ContactComponent';
+import FaqsComponent from '../components/FaqsComponent';
+import PortfolioComponent from '../components/PortfolioComponent';
+import TestimonialsComponent from '../components/TestimonialsComponent';
+
+const AOS = dynamic(() => import('aos'), { ssr: false });
+
+const SECTION_STYLES = "my-8 p-4 rounded shadow-lg";
+const HOVER_EFFECT = "transform hover:scale-105 transition-transform duration-300";
+const ODD_SECTION = "bg-gray-100";
+const EVEN_SECTION = "bg-white shadow-2xl";
 
 const Home = () => {
+  useEffect(() => {
+    const AOS = require('aos');
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+    window.scrollTo(0, 0);
+}, []);
+
+
+  const renderSection = (Component, animation, isOdd = false) => (
+    <div 
+      className={`${SECTION_STYLES} ${isOdd ? ODD_SECTION : EVEN_SECTION} ${HOVER_EFFECT}`} 
+      data-aos={animation}
+    >
+      <Component />
+    </div>
+  );
+
   return (
-    <div className="flex flex-col items-center justify-center h-screen p-8">
-      {/* Profile Picture */}
-      <div className="mb-4">
-        <Image src="/business.png" alt="Accountant" width={200} height={200} />
-      </div>
-      <h1 className="text-4xl font-semibold mb-4">
-        Trusted Accounting Professional Bringing Order to Financial Chaos
-      </h1>
-      <p className="text-lg text-center mb-8">
-        Welcome to Your Financial Cleanup, your trusted partner in achieving financial clarity and stability.
-        Our dedicated team of skilled professionals specializes in providing top-notch cleanup services that
-        bring clear and tangible financial benefits to our valued clients.
-      </p>
-      <p className="text-lg text-center mb-8">
-        With years of experience and a proven track record, we are committed to helping individuals and businesses
-        organize their financial records, streamline processes, and unlock new opportunities for growth.
-      </p>
+    <div className="flex flex-col items-center p-4 md:p-8 w-full">
+      {renderSection(IntroductionComponent, "fade-up")}
+      {renderSection(ServicesComponent, "fade-up")}
+      {renderSection(AboutComponent, "fade-right", true)}
+      {renderSection(PortfolioComponent, "fade-down")}
+      {renderSection(TestimonialsComponent, "fade-right", true)}
+      {renderSection(FaqsComponent, "fade-up")}
+      {renderSection(BlogComponent, "fade-left", true)}
+      {renderSection(ContactComponent, "fade-right")}
     </div>
   );
 };
