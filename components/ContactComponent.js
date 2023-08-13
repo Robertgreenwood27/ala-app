@@ -9,7 +9,7 @@ const ContactComponent = () => {
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    setFormData(prevState => ({ ...prevState, [name]: value }));
+    setFormData((prevState) => ({ ...prevState, [name]: value }));
   };
 
   const handleSubmit = (event) => {
@@ -26,7 +26,7 @@ const ContactComponent = () => {
     <div className="p-8">
       <h2 className="text-2xl font-semibold mb-4">Contact</h2>
       <p className="mb-6">
-        Ready to get organized? Reach out for a consultation. I'm approachable and eager to assist you.
+        Ready to get organized? Reach out for a consultation. I&apos;m approachable and eager to assist you.
       </p>
 
       <div className="mb-8">

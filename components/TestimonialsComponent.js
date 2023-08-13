@@ -8,7 +8,7 @@ const Testimonial = ({ imagePath, altText, testimonialText, author }) => (
         </div>
         <div>
             <p className="text-base md:text-lg">
-                "{testimonialText}"
+                &ldquo;{testimonialText}&rdquo;
             </p>
             <p className="mt-2 font-semibold text-sm md:text-base">
                 - {author}
