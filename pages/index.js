@@ -11,7 +11,7 @@ import TestimonialsComponent from '../components/TestimonialsComponent';
 
 const AOS = dynamic(() => import('aos'), { ssr: false });
 
-const SECTION_STYLES = "my-8 p-4 rounded shadow-lg";
+const SECTION_STYLES = "my-4 p-2 rounded shadow-lg";
 const HOVER_EFFECT = "transform hover:scale-105 transition-transform duration-300";
 const ODD_SECTION = "bg-gray-100";
 const EVEN_SECTION = "bg-white shadow-2xl";
@@ -20,7 +20,7 @@ const Home = () => {
   useEffect(() => {
     const AOS = require('aos');
     AOS.init({
-      duration: 1000,
+      duration: 500,
       once: true,
     });
     window.scrollTo(0, 0);
@@ -37,7 +37,7 @@ const Home = () => {
   );
 
   return (
-    <div className="flex flex-col items-center p-4 md:p-8 w-full">
+    <div className="flex flex-col items-center p-0 md:p-8 w-full">
       {renderSection(IntroductionComponent, "fade-up")}
       {renderSection(ServicesComponent, "fade-up")}
       {renderSection(AboutComponent, "fade-right", true)}
