@@ -3,7 +3,7 @@ import React from 'react';
 const IntroductionComponent = () => {
   return (
     <div className="text-center">
-      <div className="bg-black p-6 md:p-0 mb-6 md:mb-10 relative">
+      <div className="bg-black p-0 md:p-0 mb-6 md:mb-10 relative">
         <img
           src="/logo.png"
           alt="Accounting & Business Solutions"

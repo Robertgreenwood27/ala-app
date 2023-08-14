@@ -20,7 +20,7 @@ const Home = () => {
   useEffect(() => {
     const AOS = require('aos');
     AOS.init({
-      duration: 500,
+      duration: 800,
       once: true,
     });
     window.scrollTo(0, 0);
