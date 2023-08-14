@@ -18,14 +18,16 @@ const EVEN_SECTION = "bg-white shadow-2xl";
 
 const Home = () => {
   useEffect(() => {
-    const AOS = require('aos');
-    AOS.init({
-      duration: 800,
-      once: true,
-    });
     window.scrollTo(0, 0);
-}, []);
-
+    setTimeout(() => {
+      const AOS = require('aos');
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
+      AOS.refresh();
+    }, 500); // A 500ms delay to initialize AOS
+  }, []);
 
   const renderSection = (Component, animation, isOdd = false) => (
     <div 
