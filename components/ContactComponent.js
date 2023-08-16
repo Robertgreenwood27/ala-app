@@ -23,7 +23,7 @@ const ContactComponent = () => {
   };
 
   return (
-    <div className="p-8">
+    <div className="p-8 w-full">
       <h2 className="text-2xl font-semibold mb-4">Contact</h2>
       <p className="mb-6">
         Ready to get organized? Reach out for a consultation. I&apos;m approachable and eager to assist you.

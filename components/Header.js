@@ -8,10 +8,6 @@ const navData = [
     href: "/services",
   },
   {
-    name: "Stylists",
-    href: "/stylists",
-  },
-  {
     name: "About",
     href: "/about",
   },
