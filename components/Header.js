@@ -39,6 +39,7 @@ export default function Header() {
     <div className="header-container fixed top-0 left-0 w-full bg-black text-zinc-300 p-2 z-50">
       <div className="flex container justify-between items-center font-bold text-2xl px-5 py-6 bg-black text-zinc-300 min-w-full md:flex-row flex-col">
       
+        <Link href="/" target="_self" style={{ zIndex: 9999 }}>Home</Link>
 
         <nav className="hidden md:flex space-x-10 items-center">
           {navData.map((n) => (
@@ -78,6 +79,12 @@ export default function Header() {
 
                 <div className="mt-[5rem] relative">
                   <nav className="grid gap-y-8">
+                    <a
+                      href="/"
+                      className="-m-3 p-3 flex items-center rounded-md hover:bg-black/20  border-[1px] border-gray-500/60"
+                    >
+                      <h1 className="my-3 ml-3 text-3xl font-bold ">Home</h1>
+                    </a>
                     {navData.map((item) => (
                       <a
                         key={item.name}
