@@ -78,26 +78,22 @@ export default function Header() {
                 </button>
 
                 <div className="mt-[5rem] relative">
-                  <nav className="grid gap-y-8">
-                    <a
-                      href="/"
-                      className="-m-3 p-3 flex items-center rounded-md hover:bg-black/20  border-[1px] border-gray-500/60"
-                    >
-                      <h1 className="my-3 ml-3 text-3xl font-bold ">Home</h1>
-                    </a>
-                    {navData.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className="-m-3 p-3 flex items-center rounded-md hover:bg-black/20  border-[1px] border-gray-500/60"
-                      >
-                        <h1 className="my-3 ml-3 text-3xl font-bold ">
-                          {item.name}
-                        </h1>
-                      </a>
-                    ))}
-                  </nav>
-                </div>
+  <nav className="grid gap-y-8">
+    <Link href="/" legacyBehavior>
+      <a className="-m-3 p-3 flex items-center rounded-md hover:bg-black/20  border-[1px] border-gray-500/60">
+        <h1 className="my-3 ml-3 text-3xl font-bold ">Home</h1>
+      </a>
+    </Link>
+    {navData.map((item) => (
+      <Link key={item.name} href={item.href}>
+        <a className="-m-3 p-3 flex items-center rounded-md hover:bg-black/20  border-[1px] border-gray-500/60">
+          <h1 className="my-3 ml-3 text-3xl font-bold ">{item.name}</h1>
+        </a>
+      </Link>
+    ))}
+  </nav>
+</div>
+
               </div>
             </div>
           ) : (
