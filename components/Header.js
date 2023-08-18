@@ -36,7 +36,8 @@ export default function Header() {
   useOnClickOutside(ref, () => setModalOpen(false));
 
   return (
-    <div className="header-container fixed top-0 left-0 w-full bg-black text-zinc-300 p-2 z-50">
+    <div className="header-container fixed top-0 left-0 bg-black text-zinc-300 p-2 z-50 w-full border-b-8 border-green-700">
+
       <div className="flex container justify-between items-center font-bold text-2xl px-5 py-6 bg-black text-zinc-300 min-w-full md:flex-row flex-col">
       
         <Link href="/" target="_self" style={{ zIndex: 9999 }}>Home</Link>

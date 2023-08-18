@@ -2,7 +2,7 @@ import React from 'react';
 
 const IntroductionComponent = () => {
   return (
-    <div className="text-center">
+    <div className="text-center w-full">
       <div className="bg-black p-0 md:p-0 mb-6 md:mb-10 relative">
         <img
           src="/logo.png"
@@ -21,7 +21,7 @@ const IntroductionComponent = () => {
       <p className="text-sm md:text-base text-center mb-6" data-aos="fade-up">
         But, it doesn&apos;t end there. My mission is to empower you. Beyond handing back a pristine financial system, I strive to impart knowledge, tools, and strategies. The result? You gain the confidence and capability to steer your finances towards a prosperous tomorrow.
       </p>
-      <button className="mt-6 px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+      <button className="mt-6 px-6 py-3 bg-green-700 text-white rounded-full hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-800">
         Get Started
       </button>
     </div>

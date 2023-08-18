@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 
 const BlogPost = ({ post }) => (
-  <div className="border rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+  <div className="border rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 w-full">
     {/* Blog Image */}
     <div className="relative h-40">
       <Image src={post.imageUrl} alt={post.title || "Blog Post Image"} layout="fill" objectFit="cover" />
@@ -21,7 +21,7 @@ const BlogPost = ({ post }) => (
 const BlogComponent = () => {
   // Sample blog posts data
   const blogPosts = [
-    { id: 1, title: "Demystifying the Financial Cleanup Process", excerpt: "...", imageUrl: "/business.png" },
+    { id: 1, title: "Demystifying the Financial Cleanup Process", excerpt: "...", imageUrl: "/papers.jpg" },
     { id: 2, title: "The Rise of Digital Accounting: What You Need to Know", excerpt: "...", imageUrl: "/business.png" },
     { id: 3, title: "Detecting Financial Irregularities: Signs and Solutions", excerpt: "...", imageUrl: "/business.png" },
     { id: 4, title: "Empower Your Financial Journey: Tips for Sustainable Growth", excerpt: "...", imageUrl: "/business.png" }

@@ -28,7 +28,7 @@ const PortfolioComponent = () => {
     ];
 
     return (
-        <div className="p-4 md:p-8">
+        <div className="p-4 md:p-8 w-full">
             <h2 className="text-2xl md:text-3xl font-semibold mb-6 md:mb-8">Portfolio</h2>
             <div className="space-y-6 md:space-y-8">
                 {projects.map((project, index) => (

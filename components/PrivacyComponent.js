@@ -2,7 +2,7 @@ import React from 'react';
 
 const PrivacyComponent = () => {
   return (
-    <div className="p-8">
+    <div className="p-8 w-full">
       <h2 className="text-2xl font-semibold mb-4">Privacy Policy</h2>
       <p className="mb-4">
         Effective Date: [Insert Date]

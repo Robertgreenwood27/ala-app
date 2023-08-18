@@ -9,7 +9,7 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <Header />
-      <body className='mt-20'>
+      <body className='mt-32'>
         <Main />
         <NextScript />
       </body>

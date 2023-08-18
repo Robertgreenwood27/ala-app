@@ -15,7 +15,7 @@ const ServiceItem = ({ src, alt, title, description }) => (
 
 const ServicesComponent = () => {
     return (
-        <div className="p-8">
+        <div className="p-8 w-full">
             {/* Header Section */}
             <h2 className="text-2xl font-semibold mb-4" data-aos="fade-up">
                 Our Services

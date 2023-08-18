@@ -5,7 +5,7 @@ const Paragraph = ({ children }) => <p className="mb-6">{children}</p>;
 
 const AboutComponent = () => {
     return (
-        <div className="p-8">
+        <div className="p-8 w-full">
             {/* Heading Section */}
             <h2 className="text-2xl font-semibold mb-4">About Me</h2>
             

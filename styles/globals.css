@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 /* styles.css */
 body {
   background-color: #F0F8FF;
@@ -9,3 +10,5 @@ body {
   padding: 10px; /* Global padding for the entire body */
   font-family: "Times New Roman", Times, serif;
 }
+
+

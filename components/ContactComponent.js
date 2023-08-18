@@ -53,7 +53,7 @@ const ContactComponent = () => {
             <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
             <textarea id="message" name="message" rows="4" value={formData.message} onChange={handleInputChange} placeholder="Your Message" className="w-full p-2 border rounded"></textarea>
           </div>
-          <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors">
+          <button type="submit" className="bg-green-700 text-white py-2 px-4 rounded hover:bg-green-800 transition-colors">
             Send Message
           </button>
         </form>

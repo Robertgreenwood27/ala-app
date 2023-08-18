@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 
 const Testimonial = ({ imagePath, altText, testimonialText, author }) => (
-    <div className="flex flex-col md:flex-row items-center mb-8">
+    <div className="flex flex-col md:flex-row items-center mb-8 w-full">
         <div className="mb-4 md:mb-0 md:mr-6 w-24 h-24 md:w-auto md:h-auto">
             <Image src={imagePath} alt={altText} width={80} height={80} />
         </div>

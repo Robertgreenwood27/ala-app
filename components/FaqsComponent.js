@@ -1,7 +1,7 @@
 import React from 'react';
 
 const FAQ = ({ question, answer }) => (
-    <div>
+    <div className='w-full'>
         <dt className="text-lg font-medium mb-2">{question}</dt>
         <dd>{answer}</dd>
     </div>
