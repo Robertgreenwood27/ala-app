@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const FAQ = ({ question, answer }) => (
-    <div className='w-full'>
-        <dt className="text-lg font-medium mb-2">{question}</dt>
-        <dd>{answer}</dd>
-    </div>
-);
+const FAQ = ({ question, answer }) => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    return (
+        <div className='w-full border-b-2 border-gray-200 py-4'>
+            <dt
+                className="text-lg md:text-xl font-medium mb-2 cursor-pointer flex justify-between items-center"
+                onClick={() => setIsOpen(!isOpen)}
+            >
+                <span>{question}</span>
+                <span className="transform transition-transform duration-300" style={{transform: isOpen ? 'rotate(180deg)' : 'rotate(0)'}}>&#9660;</span>
+            </dt>
+            {isOpen && <dd className="text-gray-700 pl-2">{answer}</dd>}
+        </div>
+    );
+};
 
 const FaqsComponent = () => {
     const faqs = [
@@ -32,10 +42,10 @@ const FaqsComponent = () => {
     ];
 
     return (
-        <div className="p-8">
-            <h2 className="text-2xl font-semibold mb-4">Frequently Asked Questions</h2>
+        <div className="p-4 md:p-8 w-full bg-gray-100">
+            <h2 className="text-2xl md:text-3xl font-semibold mb-6 md:mb-8">Frequently Asked Questions</h2>
             
-            <dl className="space-y-6">
+            <dl className="space-y-6 md:space-y-8 bg-white p-4 rounded-md shadow-md">
                 {faqs.map((faq, index) => (
                     <FAQ key={index} {...faq} />
                 ))}

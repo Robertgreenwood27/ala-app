@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Project = ({ title, description }) => (
-    <div className="border rounded-lg p-4 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+    <div className="border-black border rounded-lg p-4 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300 transform hover:scale-105">
         <h3 className="text-xl font-medium mb-3 md:mb-4">{title}</h3>
         <p>{description}</p>
     </div>

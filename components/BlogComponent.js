@@ -2,14 +2,14 @@ import React from 'react';
 import Image from 'next/image';
 
 const BlogPost = ({ post }) => (
-  <div className="border rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 w-full">
+  <div className="border-black border rounded-lg overflow-hidden hover:shadow-md transition-shadow duration-300 transform hover:scale-105 w-full">
     {/* Blog Image */}
     <div className="relative h-40">
       <Image src={post.imageUrl} alt={post.title || "Blog Post Image"} layout="fill" objectFit="cover" />
     </div>
 
     {/* Blog Content */}
-    <div className="p-4">
+    <div className="p-4 md:p-6">
       <h3 className="text-xl font-medium mb-2">{post.title}</h3>
       <p className="text-gray-600">{post.excerpt}</p>
       {/* Consider adding a link or button to the full blog post */}
@@ -28,8 +28,8 @@ const BlogComponent = () => {
   ];
 
   return (
-    <div className="p-8">
-      <h2 className="text-2xl font-semibold mb-4">Blog</h2>
+    <div className="p-4 md:p-8 w-full">
+      <h2 className="text-2xl md:text-3xl font-semibold mb-6 md:mb-8">Blog</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {blogPosts.map(post => (
           <BlogPost key={post.id} post={post} />

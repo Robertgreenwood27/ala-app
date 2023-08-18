@@ -7,7 +7,7 @@ const Testimonial = ({ imagePath, altText, testimonialText, author }) => (
             <Image src={imagePath} alt={altText} width={80} height={80} />
         </div>
         <div>
-            <p className="text-base md:text-lg">
+            <p className="text-base md:text-lg  italic">
                 &ldquo;{testimonialText}&rdquo;
             </p>
             <p className="mt-2 font-semibold text-sm md:text-base">
@@ -40,7 +40,7 @@ const TestimonialsComponent = () => {
     ];
 
     return (
-        <div className="p-4 md:p-8">
+        <div className="px-8 py-16 w-full">
             <h2 className="text-2xl md:text-3xl font-semibold mb-6 md:mb-8">What Our Clients Say</h2>
             
             <div>

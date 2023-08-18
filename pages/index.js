@@ -10,8 +10,8 @@ import PortfolioComponent from '../components/PortfolioComponent';
 import TestimonialsComponent from '../components/TestimonialsComponent';
 
 const SECTION_STYLES = "my-2 p-2 rounded shadow-lg w-full";
-const ODD_SECTION = "bg-gray-100";
-const EVEN_SECTION = "bg-white shadow-2xl";
+const ODD_SECTION = "bg-gradient-to-r from-gray-100 via-gray-200 to-white";
+const EVEN_SECTION = "bg-gradient-to-r from-white via-gray-100 to-gray-200";
 
 const Home = () => {
   useEffect(() => {
@@ -49,7 +49,7 @@ const Home = () => {
       {renderSection(ContactComponent)}
       <button
         onClick={scrollToTop}
-        className="p-4 bg-zinc-400 text-white rounded-full shadow-lg cursor-pointer"
+        className="p-4 bg-green-700 hover:bg-green-900 text-white rounded-full shadow-lg cursor-pointer transform transition-all duration-300 hover:scale-110 animate-pulse"
       >
         &uarr;
       </button>
